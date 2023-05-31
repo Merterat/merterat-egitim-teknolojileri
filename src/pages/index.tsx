@@ -5,25 +5,31 @@ import { useState } from "react";
 import WordData from "../data/words.json";
 
 // eslint-disable-next-line @typescript-eslint/require-await
-// export const getServerSideProps: GetServerSideProps<> = async () => {
-//   const { words } = WordData;
-//   const { hint, word } = words[Math.floor(Math.random() * words.length)]!;
-//   return {
-//     props: {
-//       hint,
-//       word: word.toLocaleLowerCase("tr").split('').map((letter) => {
-//         return {
-//           letter,
-//           isGuessed: false,
-//         }
-//       })
-//     }
-//   }
-// }
+export const getServerSideProps: GetServerSideProps = async () => {
+  const { words } = WordData;
+  const { hint, word } = words[Math.floor(Math.random() * words.length)]!;
+  return {
+    props: {
+      hint,
+      serverWord: word.toLocaleLowerCase("tr").split('').map((letter) => {
+        return {
+          letter,
+          isGuessed: false,
+        }
+      })
+    }
+  }
+}
 
-// type PageProps=InferGetServerSidePropsType<typeof getServerSideProps>
+type PageProps = {
+  hint: string,
+  serverWord: {
+    letter: string;
+    isGuessed: boolean;
+  }[]
+}
 
-const Home: NextPage = () => {
+const Home: NextPage<PageProps> = ({ hint, serverWord }) => {
 
   // hydration error getserverside props initial word values
   const getRandomWord = () => {
@@ -39,7 +45,7 @@ const Home: NextPage = () => {
       })
     }
   }
-  const [word, setWord] = useState(getRandomWord());
+  const [word, setWord] = useState({ hint, word: serverWord });
   const [guess, setGuess] = useState("");
   const [finished, setFinished] = useState(false);
 
@@ -79,7 +85,7 @@ const Home: NextPage = () => {
               word.word.map((letter, index) => {
                 return (
                   <div key={index} className="flex justify-center rounded-lg text-gray-900 text-4xl items-center w-24 h-24 bg-gray-200">
-                    {letter.letter}
+                    {letter.isGuessed ? letter.letter : "*"}
                   </div>
                 )
               })
