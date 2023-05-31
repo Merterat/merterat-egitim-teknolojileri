@@ -70,7 +70,7 @@ const Home: NextPage<PageProps> = ({ hint, serverWord }) => {
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setGuess(event.currentTarget.value);
   }
-
+// kapalı istiare kelime taşıyor
   return (
     <>
       <Head>
