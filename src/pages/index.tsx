@@ -70,7 +70,7 @@ const Home: NextPage<PageProps> = ({ hint, serverWord }) => {
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setGuess(event.currentTarget.value);
   }
-// kapalı istiare kelime taşıyor
+  // kapalı istiare kelime taşıyor
   return (
     <>
       <Head>
@@ -79,14 +79,18 @@ const Home: NextPage<PageProps> = ({ hint, serverWord }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex min-h-screen flex-col items-center text-gray-200 justify-center bg-gray-700">
-        <div className="flex flex-col items-center justify-center max-w-4xl">
-          <div className="flex flex-row gap-2">
+        <div className="flex flex-col items-center justify-center  max-w-4xl">
+          <div className={`flex flex-row gap-2 ${word.word.some((val) => val.letter === "-") ? "flex-wrap" : ""} justify-center`}>
             {
               word.word.map((letter, index) => {
                 return (
-                  <div key={index} className="flex justify-center rounded-lg text-gray-900 text-4xl items-center w-24 h-24 bg-gray-200">
-                    {letter.isGuessed ? letter.letter : letter.letter}
-                  </div>
+                  letter.letter === "-" ? <div className="basis-full h-0" /> :
+                    (
+                      <div key={index} className="flex justify-center rounded-lg text-gray-900 text-4xl items-center w-24 h-24 bg-gray-200">
+                        {letter.isGuessed ? letter.letter : letter.letter}
+                      </div>
+                    )
+
                 )
               })
             }

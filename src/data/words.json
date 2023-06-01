@@ -13,7 +13,7 @@
             "hint": "İnsan dışındaki canlı, cansız varlıkları konuşturma sanatıdır. Özellikle fabllarda sık kullanılan sanattır."
         },
         {
-            "word": "MECAZI MÜRSEL",
+            "word": "MECAZI-MÜRSEL",
             "hint": "Bir sözün benzetme amacı güdülmeden başka bir söz yerine kullanılmasıdır.Genellikle SÖZÜ FAZLA UZATMAMAK için bu sanata başvurulur."
         },
         {
@@ -25,7 +25,7 @@
             "hint": "Herkesçe bilinen özellikle tarihteki bir olaya veya bir esere değinmek, onu hatırlatmaktır."
         },
         {
-            "word": "HÜSNÜ TALİL",
+            "word": "HÜSNÜ-TALİL",
             "hint": "Bir durumu bir olayı gerçek sebebinin dışında şairin kendince bulduğu bir sebebe bağlamasıdır.Genellikle doğada olan durumlarla ilgili olur."
         },
         {
@@ -41,7 +41,7 @@
             "hint": "Anlatımı güçlendirmek için bir sözü veya söz grubunu dörtlükte veya beyitte tekrar etmek sanatıdır."
         },
         {
-            "word": "KAPALI İSTİARE",
+            "word": "KAPALI-İSTİARE",
             "hint": "Yalnız “benzeyen” kullanılarak yapılan benzetmedir. “kendisine benzetilen” söylenmez."
         },
         {
@@ -78,7 +78,7 @@
         },
         {
             "word": "CİNAS",
-            "hint": "Seslen aynı, anlamları farklı sözleri bir arada kullanma sanatıdır. Yani sesteş sözcüklerin ayrı ayrı anlamlarda kullanılmasıdır. Cinaslı sözcükler daha çok manilerde kullanılır."
+            "hint": "Sesleri aynı, anlamları farklı sözleri bir arada kullanma sanatıdır. Yani sesteş sözcüklerin ayrı anlamlarda kullanılmasıdır. Daha çok manilerde kullanılır."
         },
         {
             "word": "ALİTERASYON",
@@ -86,7 +86,7 @@
         },
         {
             "word": "SECİ",
-            "hint": "Düzyazı cümleleri içinde ya da sonlarında yapılan uyaklara seci denir. Divan edebiyatının süslü düzyazı örneklerinde secilere bolca rastlanır."
+            "hint": "Düzyazı cümleleri içinde ya da sonlarında yapılan uyaklardır. Divan edebiyatının süslü düzyazı örneklerinde bolca rastlanılmaktadır."
         }
     ]
 }
