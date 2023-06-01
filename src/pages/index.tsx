@@ -70,7 +70,7 @@ const Home: NextPage<PageProps> = ({ hint, serverWord }) => {
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setGuess(event.currentTarget.value);
   }
-  // kapalı istiare kelime taşıyor
+
   return (
     <>
       <Head>
@@ -87,7 +87,7 @@ const Home: NextPage<PageProps> = ({ hint, serverWord }) => {
                   letter.letter === "-" ? <div className="basis-full h-0" /> :
                     (
                       <div key={index} className="flex justify-center rounded-lg text-gray-900 text-4xl items-center w-24 h-24 bg-gray-200">
-                        {letter.isGuessed ? letter.letter : letter.letter}
+                        {letter.isGuessed ? letter.letter : "*"}
                       </div>
                     )
 
